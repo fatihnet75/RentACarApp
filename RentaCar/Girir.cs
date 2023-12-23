@@ -23,7 +23,8 @@ namespace RentaCar
         private void button1_Click(object sender, EventArgs e)
         {
             aracOzellik aracOzellik = new aracOzellik();
-            aracOzellik.Show();
+
+            aracOzellik.Show(); 
         }
         // araç kirala
         private void button4_Click(object sender, EventArgs e)
