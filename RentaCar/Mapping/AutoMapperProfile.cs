@@ -32,7 +32,7 @@ namespace RentaCar.Mapping
             CreateMap<IDictionary<string, object>, CarCustommer>()
                 .ForMember(dest => dest.Tc, opt => opt.MapFrom(src => src["tc"]))
                 .ForMember(dest => dest.isim, opt => opt.MapFrom(src => src["Ad"]))
-                .ForMember(dest => dest.SoyIsim, opt => opt.MapFrom(src => src["SoYA"]))
+                .ForMember(dest => dest.SoyIsim, opt => opt.MapFrom(src => src["Soyad"]))
                 .ForMember(dest => dest.Tel, opt => opt.MapFrom(src => src["tel"]))
                 .ForMember(dest => dest.Eposta, opt => opt.MapFrom(src => src["Eposta"]));
 

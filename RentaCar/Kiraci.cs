@@ -38,13 +38,25 @@ namespace RentaCar
                 LastYil = Convert.ToDateTime(bitisTextBox.Text),
                 Plaka = Convert.ToInt64(plaka),
                 Tc = Convert.ToInt64(tcTextBox.Text),
+                
             };
-            var SavedCustommer=new CarCustommer();
-           
+            var carCustommer=new CarCustommer()
+            {
+                Tc= Convert.ToInt64(tcTextBox.Text),
+                Tel = Convert.ToInt64(telTextBox.Text),
+                isim = Convert.ToString(adTextBox.Text),
+                SoyIsim = Convert.ToString(soyadTextBox.Text),
+                Eposta = Convert.ToString(ePostaTextBox.Text),
+                
+
+            };
+          
+            custommer.SetCustommer(carCustommer);
             rezervation.SetRezervasyon(carRezervation);
             odeme odeme = new odeme();
             odeme.Show();
            
         }
+       
     }
 }

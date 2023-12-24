@@ -111,7 +111,7 @@
             // telTextBox
             // 
             telTextBox.Location = new Point(480, 117);
-            telTextBox.Mask = "(999) 000-0000";
+            telTextBox.Mask = "00000000000";
             telTextBox.Name = "telTextBox";
             telTextBox.Size = new Size(125, 27);
             telTextBox.TabIndex = 7;
