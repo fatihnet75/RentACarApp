@@ -37,7 +37,7 @@ namespace RentaCar
                 int rowIndex = dataGridView1.Rows.Add();
                 DataGridViewRow row = dataGridView1.Rows[rowIndex];
 
-                foreach (var property in typeof(Cars).GetProperties())
+                foreach (var property in typeof(CarsWithDetail).GetProperties())
                 {
                     var value = property.GetValue(car);
                     row.Cells[property.Name].Value = value;

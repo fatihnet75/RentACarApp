@@ -22,6 +22,11 @@ namespace RentaCar.Mapping
                 .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src["marka"]))
                 .ForMember(dest => dest.Model, opt => opt.MapFrom(src => src["model"]));
 
+            CreateMap<IDictionary<string, object>, CarRezervation>()
+                .ForMember(dest => dest.FirstYil, opt => opt.MapFrom(src => src["başlamatarihi"]))
+                .ForMember(dest => dest.LastYil, opt => opt.MapFrom(src => src["bitiştarihi"]))
+                .ForMember(dest => dest.Plaka, opt => opt.MapFrom(src => src["plaka"]));
+
         }
     }
 }
