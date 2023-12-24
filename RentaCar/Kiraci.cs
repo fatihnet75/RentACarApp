@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,11 +19,13 @@ namespace RentaCar
         private readonly CarService carService;
         private string plaka;
         private readonly RezervationRepository rezervation;
+        private readonly Custommer custommer;
         public Kiraci(CarService carService, string plaka)
         {
             this.carService = carService;
             this.plaka = plaka;
             rezervation = new RezervationRepository();
+            custommer=new Custommer();
             InitializeComponent();
         }
 
@@ -36,7 +39,8 @@ namespace RentaCar
                 Plaka = Convert.ToInt64(plaka),
                 Tc = Convert.ToInt64(tcTextBox.Text),
             };
-
+            var SavedCustommer=new CarCustommer();
+           
             rezervation.SetRezervasyon(carRezervation);
             odeme odeme = new odeme();
             odeme.Show();

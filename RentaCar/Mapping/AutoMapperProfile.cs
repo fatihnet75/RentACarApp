@@ -29,11 +29,11 @@ namespace RentaCar.Mapping
                 .ForMember(dest => dest.LastYil, opt => opt.MapFrom(src => src["bitiştarihi"]))
                 .ForMember(dest => dest.Plaka, opt => opt.MapFrom(src => src["plaka"]));
 
-            CreateMap<IDictionary<string, object>, Custommer>()
+            CreateMap<IDictionary<string, object>, CarCustommer>()
                 .ForMember(dest => dest.Tc, opt => opt.MapFrom(src => src["tc"]))
-                .ForMember(dest => dest.Tel, opt => opt.MapFrom(src => src["tel"]))
                 .ForMember(dest => dest.isim, opt => opt.MapFrom(src => src["Ad"]))
-                .ForMember(dest => dest.SoyIsim, opt => opt.MapFrom(src => src["SOYAD"]))
+                .ForMember(dest => dest.SoyIsim, opt => opt.MapFrom(src => src["SoYA"]))
+                .ForMember(dest => dest.Tel, opt => opt.MapFrom(src => src["tel"]))
                 .ForMember(dest => dest.Eposta, opt => opt.MapFrom(src => src["Eposta"]));
 
         }

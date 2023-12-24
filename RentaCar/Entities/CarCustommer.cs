@@ -2,7 +2,7 @@
 
 namespace RentaCar.Entities
 {
-	public class Custommer 
+	public class CarCustommer 
 	{
         public long Tc { get; set; }
         public long Tel { get; set; }
