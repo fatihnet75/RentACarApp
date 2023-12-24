@@ -12,7 +12,7 @@ namespace RentaCar.Repository.DbContext
     /// 
     /// </summary>
     /// <returns></returns>
-        private SqlConnection GetSqlConnection()
+        protected SqlConnection GetSqlConnection()
         {
             string connectionString = "Server=DESKTOP-V0VK574\\SQLEXPRESS;Database=GoACar;User Id=User;Password=123456;";
             SqlConnection connection = new SqlConnection(connectionString);

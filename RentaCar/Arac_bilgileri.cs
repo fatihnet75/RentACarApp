@@ -14,7 +14,7 @@ namespace RentaCar
 
             // Veritabanýndan verileri al
             // var cars = _carService.GetAllCars();
-
+            //burasý düzelecek sadece elektirik için 
             var cars = _carService.GetAllCarsWithDetail("Elektrik");
 
             // DataGridView'i temizle

@@ -64,7 +64,7 @@ namespace RentaCar
             plakaText.Name = "plakaText";
             plakaText.Size = new Size(137, 40);
             plakaText.TabIndex = 2;
-            plakaText.Text = "Hasan";
+            plakaText.Text = "Plaka Giriniz";
             // 
             // Arac_bilgileri
             // 

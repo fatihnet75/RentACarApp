@@ -1,17 +1,32 @@
 ﻿using System;
+using System.Data.SqlClient;
 using RentaCar.Entities;
 using RentaCar.Repository.DbContext;
 
 namespace RentaCar.Repository.Car
 {
-	public class RezervationRepository : AppDbContext
+    //Bitti
+    public class RezervationRepository : AppDbContext
     {
         public void SetRezervasyon(CarRezervation rezervation)
         {
-            string query = $"INSERT INTO [dbo].[Rezervasyon] VALUES ('{rezervation.Tc}','{rezervation.Plaka}','{rezervation.FirstYil}','{rezervation.LastYil}')";
-            var response = Query(query);
+            string query = "INSERT INTO [dbo].[Rezervasyon] VALUES (@Tc, @Plaka, @FirstYil, @LastYil)";
 
-     
+            using (SqlConnection connection = GetSqlConnection())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Tc", rezervation.Tc);
+                    command.Parameters.AddWithValue("@Plaka", rezervation.Plaka);
+                    command.Parameters.AddWithValue("@FirstYil", rezervation.FirstYil);
+                    command.Parameters.AddWithValue("@LastYil", rezervation.LastYil);
+
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

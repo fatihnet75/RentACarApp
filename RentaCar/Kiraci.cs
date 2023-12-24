@@ -30,15 +30,17 @@ namespace RentaCar
         {
             var carRezervation = new CarRezervation()
             {
-                FirstYil = DateTime.Now,
-                LastYil = DateTime.Now,
-                Plaka = plaka,
-                Tc = Convert.ToInt64(tcTextBox.Text)
+                
+                FirstYil = Convert.ToDateTime(baslangicTextBox.Text),
+                LastYil = Convert.ToDateTime(bitisTextBox.Text),
+                Plaka = Convert.ToInt64(plaka),
+                Tc = Convert.ToInt64(tcTextBox.Text),
             };
 
             rezervation.SetRezervasyon(carRezervation);
             odeme odeme = new odeme();
             odeme.Show();
+           
         }
     }
 }
