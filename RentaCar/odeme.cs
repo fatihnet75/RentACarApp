@@ -33,7 +33,7 @@ namespace RentaCar
             {
                miktar = Convert.ToInt32(label2.Text),
                Tarih = Convert.ToDateTime(DateTextBox1.Text),
-                Tc = tc,
+                Tc = tc
 
             };
             playment.SetPlayment(carplayment);
@@ -43,6 +43,15 @@ namespace RentaCar
 
         private void pesinButton_Click(object sender, EventArgs e)
         {
+
+            var carplayment = new CarPayment()
+            {
+                miktar = Convert.ToInt32(label2.Text),
+                Tarih = Convert.ToDateTime(DateTextBox1.Text),
+                Tc = tc,
+
+            };
+            playment.SetPlayment(carplayment);
             pesin pesin = new pesin(Convert.ToInt32(label2.Text));
             pesin.Show();
         }

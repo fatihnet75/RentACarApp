@@ -51,6 +51,23 @@ namespace RentaCar.Mapping
               .ForMember(dest => dest.Cvv, opt => opt.MapFrom(src => src["cvv"]))
               .ForMember(dest => dest.KartName, opt => opt.MapFrom(src => src["kartisim"]));
 
+            CreateMap<IDictionary<string, object>, CarGasoline>()
+              .ForMember(dest => dest.Plaka, opt => opt.MapFrom(src => src["plaka"]))
+              .ForMember(dest => dest.marka, opt => opt.MapFrom(src => src["marka"]))
+              .ForMember(dest => dest.model, opt => opt.MapFrom(src => src["model"]));
+
+            CreateMap<IDictionary<string, object>, CarElectiric>()
+              .ForMember(dest => dest.Plaka, opt => opt.MapFrom(src => src["plaka"]))
+              .ForMember(dest => dest.marka, opt => opt.MapFrom(src => src["marka"]))
+              .ForMember(dest => dest.model, opt => opt.MapFrom(src => src["model"]));
+
+            CreateMap<IDictionary<string, object>, AddCArs>()
+               .ForMember(dest => dest.Plaka, opt => opt.MapFrom(src => src["plaka"]))
+               .ForMember(dest => dest.Renk, opt => opt.MapFrom(src => src["renk"]))
+               .ForMember(dest => dest.Fiyat, opt => opt.MapFrom(src => src["fiyat"]))
+               .ForMember(dest => dest.Yil, opt => opt.MapFrom(src => src["yıl"]));
+
+
 
         }
     }

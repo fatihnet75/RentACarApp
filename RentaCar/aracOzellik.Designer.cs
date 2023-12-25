@@ -38,7 +38,7 @@
             plakaTextBox = new TextBox();
             fiyatTextBox = new TextBox();
             renkTextBox = new TextBox();
-            renkkTextBox = new TextBox();
+            modelkTextBox = new TextBox();
             markaTextBox = new TextBox();
             label7 = new Label();
             benzinRadioButton = new RadioButton();
@@ -50,6 +50,51 @@
             label5 = new Label();
             label6 = new Label();
             SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(83, 120);
+            label2.Name = "label2";
+            label2.Size = new Size(47, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Plaka:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(83, 189);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 20);
+            label3.TabIndex = 4;
+            label3.Text = "Fiyat:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(83, 260);
+            label4.Name = "label4";
+            label4.Size = new Size(44, 20);
+            label4.TabIndex = 6;
+            label4.Text = "Renk:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(394, 116);
+            label5.Name = "label5";
+            label5.Size = new Size(55, 20);
+            label5.TabIndex = 10;
+            label5.Text = "Model:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(394, 45);
+            label6.Name = "label6";
+            label6.Size = new Size(53, 20);
+            label6.TabIndex = 8;
+            label6.Text = "Marka:";
             // 
             // label1
             // 
@@ -69,15 +114,6 @@
             yilTextBox.TabIndex = 1;
             yilTextBox.ValidatingType = typeof(DateTime);
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(83, 120);
-            label2.Name = "label2";
-            label2.Size = new Size(47, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Plaka:";
-            // 
             // plakaTextBox
             // 
             plakaTextBox.Location = new Point(163, 113);
@@ -92,15 +128,6 @@
             fiyatTextBox.Size = new Size(125, 27);
             fiyatTextBox.TabIndex = 5;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(83, 189);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 20);
-            label3.TabIndex = 4;
-            label3.Text = "Fiyat:";
-            // 
             // renkTextBox
             // 
             renkTextBox.Location = new Point(163, 253);
@@ -108,30 +135,12 @@
             renkTextBox.Size = new Size(125, 27);
             renkTextBox.TabIndex = 7;
             // 
-            // label4
+            // modelkTextBox
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(83, 260);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 20);
-            label4.TabIndex = 6;
-            label4.Text = "Renk:";
-            // 
-            // renkkTextBox
-            // 
-            renkkTextBox.Location = new Point(474, 109);
-            renkkTextBox.Name = "renkkTextBox";
-            renkkTextBox.Size = new Size(125, 27);
-            renkkTextBox.TabIndex = 11;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(394, 116);
-            label5.Name = "label5";
-            label5.Size = new Size(44, 20);
-            label5.TabIndex = 10;
-            label5.Text = "Renk:";
+            modelkTextBox.Location = new Point(474, 109);
+            modelkTextBox.Name = "modelkTextBox";
+            modelkTextBox.Size = new Size(125, 27);
+            modelkTextBox.TabIndex = 11;
             // 
             // markaTextBox
             // 
@@ -139,15 +148,6 @@
             markaTextBox.Name = "markaTextBox";
             markaTextBox.Size = new Size(125, 27);
             markaTextBox.TabIndex = 9;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(394, 45);
-            label6.Name = "label6";
-            label6.Size = new Size(53, 20);
-            label6.TabIndex = 8;
-            label6.Text = "Marka:";
             // 
             // label7
             // 
@@ -199,7 +199,7 @@
             Controls.Add(elektrikRadioButton);
             Controls.Add(benzinRadioButton);
             Controls.Add(label7);
-            Controls.Add(renkkTextBox);
+            Controls.Add(modelkTextBox);
             Controls.Add(label5);
             Controls.Add(markaTextBox);
             Controls.Add(label6);
@@ -224,7 +224,7 @@
         private TextBox plakaTextBox;
         private TextBox fiyatTextBox;
         private TextBox renkTextBox;
-        private TextBox renkkTextBox;
+        private TextBox modelkTextBox;
         private TextBox markaTextBox;
         private Label label7;
         private RadioButton benzinRadioButton;
