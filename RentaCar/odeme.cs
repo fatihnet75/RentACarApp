@@ -1,22 +1,11 @@
 ﻿using RentaCar.Entities;
 using RentaCar.Repository.Car;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace RentaCar
 {
     public partial class odeme : Form
     {
-        private readonly Playment playment;
+        private readonly Playment playment = new Playment();
         private long plaka;
         private long tc;
         public odeme(long plaka, long tc)
@@ -26,8 +15,7 @@ namespace RentaCar
                 this.plaka = plaka;
                 this.tc = tc;
                 InitializeComponent();
-                //playment.getAmount(plaka) buraya miktarı çekmen lazım yoksa güm;
-                int paymentAmount = 5000;
+                var paymentAmount = playment.GetAmountAsync(plaka.ToString());
                 label2.Text = paymentAmount.ToString();  // Bu satırı kontrol edin
             }
             else

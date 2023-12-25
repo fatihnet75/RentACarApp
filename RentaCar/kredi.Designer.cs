@@ -56,7 +56,7 @@
             // kartIdTextBox
             // 
             kartIdTextBox.Location = new Point(213, 108);
-            kartIdTextBox.Mask = "0000-0000-0000-0000";
+            kartIdTextBox.Mask = "0000000000000000";
             kartIdTextBox.Name = "kartIdTextBox";
             kartIdTextBox.Size = new Size(125, 27);
             kartIdTextBox.TabIndex = 14;

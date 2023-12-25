@@ -16,7 +16,7 @@ namespace RentaCar
 {
     public partial class kredi : Form
     {
-        private readonly Credit credit;
+        private readonly Credit credit = new Credit();
         public kredi()
         {
             InitializeComponent();

@@ -13,7 +13,7 @@ namespace RentaCar.Repository.Car
     {
         public void SetCredit(CarCredit Credit)
         {
-            string query = "INSERT INTO [dbo].[Kredi] VALUES (@kartid  @cvv, @kartisim)";
+            string query = "INSERT INTO [dbo].[Kredi] VALUES (@kartid,  @cvv, @kartisim)";
 
             using (SqlConnection connection = GetSqlConnection())
             {
