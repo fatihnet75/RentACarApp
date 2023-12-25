@@ -31,7 +31,8 @@
             tarihTextBox = new MaskedTextBox();
             label1 = new Label();
             label3 = new Label();
-            label2 = new Label();
+            toplamlabel2 = new Label();
+            Savebutton1 = new Button();
             SuspendLayout();
             // 
             // tarihTextBox
@@ -61,21 +62,31 @@
             label3.TabIndex = 5;
             label3.Text = "Toplam:";
             // 
-            // label2
+            // toplamlabel2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(229, 115);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 6;
-            label2.Text = "label2";
+            toplamlabel2.AutoSize = true;
+            toplamlabel2.Location = new Point(229, 115);
+            toplamlabel2.Name = "toplamlabel2";
+            toplamlabel2.Size = new Size(0, 20);
+            toplamlabel2.TabIndex = 6;
+            // 
+            // Savebutton1
+            // 
+            Savebutton1.Location = new Point(274, 243);
+            Savebutton1.Name = "Savebutton1";
+            Savebutton1.Size = new Size(153, 51);
+            Savebutton1.TabIndex = 7;
+            Savebutton1.Text = "Kaydet";
+            Savebutton1.UseVisualStyleBackColor = true;
+            Savebutton1.Click += Savebutton1_Click;
             // 
             // pesin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
+            Controls.Add(Savebutton1);
+            Controls.Add(toplamlabel2);
             Controls.Add(label3);
             Controls.Add(tarihTextBox);
             Controls.Add(label1);
@@ -90,6 +101,7 @@
         private MaskedTextBox tarihTextBox;
         private Label label1;
         private Label label3;
-        private Label label2;
+        private Label toplamlabel2;
+        private Button Savebutton1;
     }
 }

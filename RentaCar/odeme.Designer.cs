@@ -30,10 +30,10 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             krediButton = new Button();
             pesinButton = new Button();
+            DateTextBox1 = new MaskedTextBox();
             SuspendLayout();
             // 
             // label1
@@ -53,15 +53,6 @@
             label2.Size = new Size(50, 20);
             label2.TabIndex = 1;
             label2.Text = "label2";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(166, 106);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 3;
-            label3.Text = "label3";
             // 
             // label4
             // 
@@ -92,14 +83,23 @@
             pesinButton.UseVisualStyleBackColor = true;
             pesinButton.Click += pesinButton_Click;
             // 
+            // DateTextBox1
+            // 
+            DateTextBox1.Location = new Point(146, 99);
+            DateTextBox1.Mask = "00/00/0000";
+            DateTextBox1.Name = "DateTextBox1";
+            DateTextBox1.Size = new Size(125, 27);
+            DateTextBox1.TabIndex = 6;
+            DateTextBox1.ValidatingType = typeof(DateTime);
+            // 
             // odeme
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(DateTextBox1);
             Controls.Add(pesinButton);
             Controls.Add(krediButton);
-            Controls.Add(label3);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -113,9 +113,9 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
         private Label label4;
         private Button krediButton;
         private Button pesinButton;
+        private MaskedTextBox DateTextBox1;
     }
 }

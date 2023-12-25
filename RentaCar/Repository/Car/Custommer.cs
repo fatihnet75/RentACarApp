@@ -10,7 +10,7 @@ namespace RentaCar.Repository.Car
 
         public void SetCustommer(CarCustommer custommer)
         {
-            string query = "INSERT INTO [dbo].[Müsteri] VALUES (@Tc,  @Ad, @Soyad,@tel, @Eposta)";
+            string query = "INSERT INTO [dbo].[Müsteri] VALUES (@Tc,  @Ad, @Soyad, @tel, @Eposta)";
 
             using (SqlConnection connection = GetSqlConnection())
             {

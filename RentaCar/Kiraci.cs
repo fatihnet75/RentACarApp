@@ -17,10 +17,10 @@ namespace RentaCar
     public partial class Kiraci : Form
     {
         private readonly CarService carService;
-        private string plaka;
+        private long plaka;
         private readonly RezervationRepository rezervation;
         private readonly Custommer custommer;
-        public Kiraci(CarService carService, string plaka)
+        public Kiraci(CarService carService, long plaka)
         {
             this.carService = carService;
             this.plaka = plaka;
@@ -40,20 +40,20 @@ namespace RentaCar
                 Tc = Convert.ToInt64(tcTextBox.Text),
                 
             };
-            var carCustommer=new CarCustommer()
+            var carCustommer = new CarCustommer()
             {
-                Tc= Convert.ToInt64(tcTextBox.Text),
+                Tc = Convert.ToInt64(tcTextBox.Text),
                 Tel = Convert.ToInt64(telTextBox.Text),
                 isim = Convert.ToString(adTextBox.Text),
                 SoyIsim = Convert.ToString(soyadTextBox.Text),
                 Eposta = Convert.ToString(ePostaTextBox.Text),
-                
+
 
             };
           
             custommer.SetCustommer(carCustommer);
             rezervation.SetRezervasyon(carRezervation);
-            odeme odeme = new odeme();
+            odeme odeme = new odeme(Convert.ToInt64(plaka), Convert.ToInt64(tcTextBox.Text));
             odeme.Show();
            
         }

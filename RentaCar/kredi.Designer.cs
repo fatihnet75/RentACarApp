@@ -32,8 +32,9 @@
             label5 = new Label();
             kartIdTextBox = new MaskedTextBox();
             label3 = new Label();
-            tcTextBox = new MaskedTextBox();
+            CvvTextBox = new MaskedTextBox();
             label1 = new Label();
+            Savebutton = new Button();
             SuspendLayout();
             // 
             // adTextBox
@@ -69,14 +70,14 @@
             label3.TabIndex = 13;
             label3.Text = "Kart Numarasi:";
             // 
-            // tcTextBox
+            // CvvTextBox
             // 
-            tcTextBox.Location = new Point(213, 184);
-            tcTextBox.Mask = "000";
-            tcTextBox.Name = "tcTextBox";
-            tcTextBox.Size = new Size(125, 27);
-            tcTextBox.TabIndex = 16;
-            tcTextBox.ValidatingType = typeof(int);
+            CvvTextBox.Location = new Point(213, 184);
+            CvvTextBox.Mask = "000";
+            CvvTextBox.Name = "CvvTextBox";
+            CvvTextBox.Size = new Size(125, 27);
+            CvvTextBox.TabIndex = 16;
+            CvvTextBox.ValidatingType = typeof(int);
             // 
             // label1
             // 
@@ -87,12 +88,23 @@
             label1.TabIndex = 15;
             label1.Text = "CVV:";
             // 
+            // Savebutton
+            // 
+            Savebutton.Location = new Point(233, 270);
+            Savebutton.Name = "Savebutton";
+            Savebutton.Size = new Size(188, 58);
+            Savebutton.TabIndex = 17;
+            Savebutton.Text = "kaydet";
+            Savebutton.UseVisualStyleBackColor = true;
+            Savebutton.Click += Savebutton_Click;
+            // 
             // kredi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tcTextBox);
+            Controls.Add(Savebutton);
+            Controls.Add(CvvTextBox);
             Controls.Add(label1);
             Controls.Add(kartIdTextBox);
             Controls.Add(label3);
@@ -110,7 +122,8 @@
         private Label label5;
         private MaskedTextBox kartIdTextBox;
         private Label label3;
-        private MaskedTextBox tcTextBox;
+        private MaskedTextBox CvvTextBox;
         private Label label1;
+        private Button Savebutton;
     }
 }

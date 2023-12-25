@@ -47,13 +47,11 @@ namespace RentaCar
 
         private void devamButton_Click(object sender, EventArgs e)
         {
-            string plaka = plakaText.Text.ToString();
+            long plaka = Convert.ToInt64(plakaText.Text);
 
-            if(plaka is not null)
-            {
                 Kiraci kiraci = new Kiraci(carService: _carService,plaka: plaka);
                 kiraci.Show();
-            }
+            
         }
     }
 }
