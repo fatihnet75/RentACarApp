@@ -11,7 +11,7 @@ namespace RentaCar.Repository.Car
 {
     public class Person : AppDbContext
     {
-        public void SetEmployee(CarPerson person)
+        public void Setperson(CarPerson person)
         {
             string query = "INSERT INTO [dbo].[kişi] VALUES (@Turkiyeno,@plaka)";
 
@@ -21,7 +21,7 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Turkiyeno", person.tc);
+                    command.Parameters.AddWithValue("@Turkiyeno", person.tc+1);
                     command.Parameters.AddWithValue("@plaka", person.Plaka);
 
                     command.ExecuteNonQuery();

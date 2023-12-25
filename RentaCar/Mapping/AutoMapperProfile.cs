@@ -67,6 +67,41 @@ namespace RentaCar.Mapping
                .ForMember(dest => dest.Fiyat, opt => opt.MapFrom(src => src["fiyat"]))
                .ForMember(dest => dest.Yil, opt => opt.MapFrom(src => src["yıl"]));
 
+            CreateMap<IDictionary<string, object>, CarOficcial>()
+              .ForMember(dest => dest.Rütbe, opt => opt.MapFrom(src => src["rütbe"]))
+              .ForMember(dest => dest.tc, opt => opt.MapFrom(src => src["tc"]))
+              .ForMember(dest => dest.pzisyon, opt => opt.MapFrom(src => src["pozisyon"]));
+              
+            CreateMap<IDictionary<string, object>, CarResponsible>()
+              .ForMember(dest => dest.AdSoyad, opt => opt.MapFrom(src => src["plaka"]))
+              .ForMember(dest => dest.plaka, opt => opt.MapFrom(src => src["renk"]));
+
+            CreateMap<IDictionary<string, object>, CarEmployee>()
+              .ForMember(dest => dest.tc, opt => opt.MapFrom(src => src["tc"]))
+              .ForMember(dest => dest.Rutbe, opt => opt.MapFrom(src => src["rütbe"]))
+              .ForMember(dest => dest.Telefon, opt => opt.MapFrom(src => src["telefon"]));
+
+            CreateMap<IDictionary<string, object>, CarPerson>()
+            .ForMember(dest => dest.tc, opt => opt.MapFrom(src => src["tc"]))
+            .ForMember(dest => dest.Plaka, opt => opt.MapFrom(src => src["plaka"]));
+
+            CreateMap<IDictionary<string, object>, CarKasko>()
+              .ForMember(dest => dest.CarKaskono, opt => opt.MapFrom(src => src["kaskono"]))
+              .ForMember(dest => dest.songecerlilik, opt => opt.MapFrom(src => src["songecerlilik"]))
+              .ForMember(dest => dest.plaka, opt => opt.MapFrom(src => src["plaka"]));
+
+            CreateMap<IDictionary<string, object>, CarSigorta>()
+              .ForMember(dest => dest.plaka, opt => opt.MapFrom(src => src["plaka"]))
+              .ForMember(dest => dest.songecerlilik, opt => opt.MapFrom(src => src["songecerlilik"]))
+              .ForMember(dest => dest.Sigortano, opt => opt.MapFrom(src => src["sigortano"]));
+
+            CreateMap<IDictionary<string, object>, CarCheufeer>()
+              .ForMember(dest => dest.tc, opt => opt.MapFrom(src => src["tc"]))
+              .ForMember(dest => dest.Ad, opt => opt.MapFrom(src => src["ad"]))
+              .ForMember(dest => dest.Soyad, opt => opt.MapFrom(src => src["soyad"]))
+              .ForMember(dest => dest.tip, opt => opt.MapFrom(src => src["ehliyettipi"]));
+
+
 
 
         }

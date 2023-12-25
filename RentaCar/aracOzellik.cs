@@ -56,7 +56,7 @@ namespace RentaCar
             {
                 electiric.SetElectiric(carElectiric);
             }
-            aracSahibi aracSahibi = new aracSahibi();
+            aracSahibi aracSahibi = new aracSahibi(Convert.ToInt64(plakaTextBox.Text));
             aracSahibi.Show();
         }
     }

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RentaCar.Repository.Car
 {
-    public class Official : AppDbContext
+    public class Clheffer : AppDbContext
     {
-        public void SetOficcial(CarOficcial oficcial)
+        public void Setcheffer(CarCheufeer Advance)
         {
-            string query = "INSERT INTO [dbo].[yetkili] VALUES (@tc,@pozisyon ,@rütbe)";
+            string query = "INSERT INTO [dbo].[Soför] VALUES (@tc, @Ad, @Soyad, @ehliyettipi )";
 
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -21,9 +21,10 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@tc", oficcial.tc);
-                    command.Parameters.AddWithValue("@pozisyon", oficcial.pzisyon);
-                    command.Parameters.AddWithValue("@rütbe", oficcial.Rütbe);
+                    command.Parameters.AddWithValue("@tc", Advance.tc);
+                    command.Parameters.AddWithValue("@ad", Advance.Ad);
+                    command.Parameters.AddWithValue("@Soyad", Advance.Soyad);
+                    command.Parameters.AddWithValue("@ehiyettipi", Advance.tip);
 
                     command.ExecuteNonQuery();
                 }

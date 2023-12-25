@@ -12,7 +12,7 @@ namespace RentaCar.Repository.Car
     public class Responsible : AppDbContext
     {
 
-        public void SetEmployee(CarResponsible responsible)
+        public void SetREsponsible(CarResponsible responsible)
         {
             string query = "INSERT INTO [dbo].[sorumlu] VALUES (@plaka,@adsoyad)";
 
