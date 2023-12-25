@@ -37,17 +37,12 @@
             label1 = new Label();
             telPozisyonTextBox = new TextBox();
             devamButton = new Button();
+            KendiArabam = new RadioButton();
+            SirketArabası = new RadioButton();
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
             SuspendLayout();
-            // 
-            // meslekTextBox
-            // 
-            meslekTextBox.Location = new Point(168, 193);
-            meslekTextBox.Name = "meslekTextBox";
-            meslekTextBox.Size = new Size(125, 27);
-            meslekTextBox.TabIndex = 11;
             // 
             // label3
             // 
@@ -58,13 +53,6 @@
             label3.TabIndex = 10;
             label3.Text = "Meslek:";
             // 
-            // adSoyadTextBox
-            // 
-            adSoyadTextBox.Location = new Point(168, 64);
-            adSoyadTextBox.Name = "adSoyadTextBox";
-            adSoyadTextBox.Size = new Size(125, 27);
-            adSoyadTextBox.TabIndex = 9;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -73,6 +61,29 @@
             label2.Size = new Size(78, 20);
             label2.TabIndex = 8;
             label2.Text = "Ad-Soyad:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(138, 239);
+            label4.Name = "label4";
+            label4.Size = new Size(579, 20);
+            label4.TabIndex = 12;
+            label4.Text = "Arac Sizin İse Telefon numaranızı giriniz Şirketin ise rütbenizi girmeniz yeterli olacaktır:";
+            // 
+            // meslekTextBox
+            // 
+            meslekTextBox.Location = new Point(168, 193);
+            meslekTextBox.Name = "meslekTextBox";
+            meslekTextBox.Size = new Size(125, 27);
+            meslekTextBox.TabIndex = 11;
+            // 
+            // adSoyadTextBox
+            // 
+            adSoyadTextBox.Location = new Point(168, 64);
+            adSoyadTextBox.Name = "adSoyadTextBox";
+            adSoyadTextBox.Size = new Size(125, 27);
+            adSoyadTextBox.TabIndex = 9;
             // 
             // tcTextBox
             // 
@@ -94,19 +105,10 @@
             // 
             // telPozisyonTextBox
             // 
-            telPozisyonTextBox.Location = new Point(220, 262);
+            telPozisyonTextBox.Location = new Point(325, 274);
             telPozisyonTextBox.Name = "telPozisyonTextBox";
             telPozisyonTextBox.Size = new Size(125, 27);
             telPozisyonTextBox.TabIndex = 13;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(88, 269);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 20);
-            label4.TabIndex = 12;
-            label4.Text = "Tel veya Pozisyon:";
             // 
             // devamButton
             // 
@@ -118,11 +120,35 @@
             devamButton.UseVisualStyleBackColor = true;
             devamButton.Click += devamButton_Click;
             // 
+            // KendiArabam
+            // 
+            KendiArabam.AutoSize = true;
+            KendiArabam.Location = new Point(427, 115);
+            KendiArabam.Name = "KendiArabam";
+            KendiArabam.Size = new Size(121, 24);
+            KendiArabam.TabIndex = 16;
+            KendiArabam.TabStop = true;
+            KendiArabam.Text = "KendiArabam";
+            KendiArabam.UseVisualStyleBackColor = true;
+            // 
+            // SirketArabası
+            // 
+            SirketArabası.AutoSize = true;
+            SirketArabası.Location = new Point(618, 115);
+            SirketArabası.Name = "SirketArabası";
+            SirketArabası.Size = new Size(117, 24);
+            SirketArabası.TabIndex = 17;
+            SirketArabası.TabStop = true;
+            SirketArabası.Text = "SirketArabası";
+            SirketArabası.UseVisualStyleBackColor = true;
+            // 
             // aracSahibi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(SirketArabası);
+            Controls.Add(KendiArabam);
             Controls.Add(devamButton);
             Controls.Add(telPozisyonTextBox);
             Controls.Add(label4);
@@ -146,5 +172,7 @@
         private Label label1;
         private TextBox telPozisyonTextBox;
         private Button devamButton;
+        private RadioButton KendiArabam;
+        private RadioButton SirketArabası;
     }
 }
