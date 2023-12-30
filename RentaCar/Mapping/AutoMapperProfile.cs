@@ -99,6 +99,7 @@ namespace RentaCar.Mapping
               .ForMember(dest => dest.Sigortano, opt => opt.MapFrom(src => src["sigortano"]));
 
             CreateMap<IDictionary<string, object>, CarCheufeer>()
+                .ForMember(dest => dest.plaka, opt => opt.MapFrom(src => src["plaka"]))
               .ForMember(dest => dest.tc, opt => opt.MapFrom(src => src["tc"]))
               .ForMember(dest => dest.Ad, opt => opt.MapFrom(src => src["ad"]))
               .ForMember(dest => dest.Soyad, opt => opt.MapFrom(src => src["soyad"]))

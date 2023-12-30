@@ -63,7 +63,8 @@ namespace RentaCar
         //Araç güncelle
         private void button3_Click(object sender, EventArgs e)
         {
-
+            update Update = new update();
+            Update.Show();
         }
     }
 }

@@ -50,6 +50,7 @@ namespace RentaCar
             {
                 var carsofor = new CarCheufeer()
                 {
+                    plaka= plaka,
                     Ad = Convert.ToString(adTextBox.Text),
                     tc = Convert.ToInt64(tcTextBox.Text),
                     Soyad = Convert.ToString(soyadTextBox.Text),

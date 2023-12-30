@@ -13,7 +13,7 @@ namespace RentaCar.Repository.Car
     {
         public void Setcheffer(CarCheufeer Advance)
         {
-            string query = "INSERT INTO [dbo].[Soför] VALUES (@tc, @Ad, @Soyad, @ehliyettipi )";
+            string query = "INSERT INTO [dbo].[Soför] VALUES (@plaka, @tc, @Ad, @Soyad, @ehliyettipi )";
 
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -21,6 +21,7 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@plaka", Advance.plaka);
                     command.Parameters.AddWithValue("@tc", Advance.tc);
                     command.Parameters.AddWithValue("@ad", Advance.Ad);
                     command.Parameters.AddWithValue("@Soyad", Advance.Soyad);
