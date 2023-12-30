@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             Silbutton1 = new Button();
+            textbox = new Label();
+            deletetextBox1 = new TextBox();
             SuspendLayout();
             // 
             // Silbutton1
@@ -39,20 +41,42 @@
             Silbutton1.TabIndex = 0;
             Silbutton1.Text = "Sil";
             Silbutton1.UseVisualStyleBackColor = true;
+            Silbutton1.Click += Silbutton1_Click;
+            // 
+            // textbox
+            // 
+            textbox.AutoSize = true;
+            textbox.Location = new Point(125, 81);
+            textbox.Name = "textbox";
+            textbox.Size = new Size(168, 20);
+            textbox.TabIndex = 1;
+            textbox.Text = "Silmek için plaka giriniz.";
+            // 
+            // deletetextBox1
+            // 
+            deletetextBox1.Location = new Point(351, 78);
+            deletetextBox1.Name = "deletetextBox1";
+            deletetextBox1.Size = new Size(125, 27);
+            deletetextBox1.TabIndex = 2;
             // 
             // Delete
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(deletetextBox1);
+            Controls.Add(textbox);
             Controls.Add(Silbutton1);
             Name = "Delete";
             Text = "Delete";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button Silbutton1;
+        private Label textbox;
+        private TextBox deletetextBox1;
     }
 }

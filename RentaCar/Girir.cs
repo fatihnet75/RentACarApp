@@ -58,7 +58,8 @@ namespace RentaCar
         // araç sil
         private void button2_Click(object sender, EventArgs e)
         {
-
+           Delete del= new Delete();
+            del.Show();
         }
         //Araç güncelle
         private void button3_Click(object sender, EventArgs e)
