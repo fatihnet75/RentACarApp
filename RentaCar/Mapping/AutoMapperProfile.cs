@@ -42,11 +42,14 @@ namespace RentaCar.Mapping
               .ForMember(dest => dest.miktar, opt => opt.MapFrom(src => src["miktar"]));
 
             CreateMap<IDictionary<string, object>, CarAdvance>()
+                
+                .ForMember(dest => dest.id, opt => opt.MapFrom(src => src["id"]))
               .ForMember(dest => dest.ToplamPara, opt => opt.MapFrom(src => src["toplampara"]))
               .ForMember(dest => dest.Tarih, opt => opt.MapFrom(src => src["Tarih"]));
              
 
             CreateMap<IDictionary<string, object>, CarCredit>()
+                .ForMember(dest => dest.no, opt => opt.MapFrom(src => src["işlemno"]))
               .ForMember(dest => dest.KartId, opt => opt.MapFrom(src => src["kartid"]))
               .ForMember(dest => dest.Cvv, opt => opt.MapFrom(src => src["cvv"]))
               .ForMember(dest => dest.KartName, opt => opt.MapFrom(src => src["kartisim"]));

@@ -13,7 +13,7 @@ namespace RentaCar.Repository.Car
     {
         public void SetCredit(CarCredit Credit)
         {
-            string query = "INSERT INTO [dbo].[Kredi] VALUES (@kartid,  @cvv, @kartisim)";
+            string query = "INSERT INTO [dbo].[Kredi] VALUES (@işlemno, @kartid,  @cvv, @kartname)";
 
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -21,9 +21,11 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+
+                    command.Parameters.AddWithValue("@işlemno", Credit.no);
                     command.Parameters.AddWithValue("@kartid", Credit.KartId);
                     command.Parameters.AddWithValue("@cvv", Credit.Cvv);
-                    command.Parameters.AddWithValue("@kartisim", Credit.KartName);
+                    command.Parameters.AddWithValue("@kartname", Credit.KartName);
                    
 
 

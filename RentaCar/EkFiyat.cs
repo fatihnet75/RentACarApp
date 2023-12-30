@@ -56,6 +56,8 @@ namespace RentaCar
                     tip=Convert.ToString(ehliyetTipiTextBox.Text),
                 };
                 cheuffer.Setcheffer(carsofor);
+                Girir basla = new Girir();
+                basla.Show();
             }
         }
     }

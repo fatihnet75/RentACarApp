@@ -21,7 +21,7 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@kaskon", Advance.CarKaskono);
+                    command.Parameters.AddWithValue("@kaskono", Advance.CarKaskono);
                     command.Parameters.AddWithValue("@songecerlilik", Advance.songecerlilik);
                     command.Parameters.AddWithValue("@plaka", Advance.plaka);
                    

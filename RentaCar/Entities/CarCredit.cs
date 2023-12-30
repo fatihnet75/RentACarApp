@@ -8,6 +8,7 @@ namespace RentaCar.Entities
 {
     public class CarCredit
     {
+        public int no {  get; set; }
         public long KartId { get; set; }
         public int Cvv { get; set; }
         public string KartName { get; set; }

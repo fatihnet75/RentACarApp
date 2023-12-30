@@ -34,6 +34,8 @@
             krediButton = new Button();
             pesinButton = new Button();
             DateTextBox1 = new MaskedTextBox();
+            idmaskedTextBox1 = new MaskedTextBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -92,11 +94,31 @@
             DateTextBox1.TabIndex = 6;
             DateTextBox1.ValidatingType = typeof(DateTime);
             // 
+            // idmaskedTextBox1
+            // 
+            idmaskedTextBox1.Location = new Point(146, 162);
+            idmaskedTextBox1.Mask = "0000";
+            idmaskedTextBox1.Name = "idmaskedTextBox1";
+            idmaskedTextBox1.Size = new Size(125, 27);
+            idmaskedTextBox1.TabIndex = 7;
+            idmaskedTextBox1.ValidatingType = typeof(DateTime);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(75, 169);
+            label3.Name = "label3";
+            label3.Size = new Size(22, 20);
+            label3.TabIndex = 8;
+            label3.Text = "id";
+            // 
             // odeme
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(idmaskedTextBox1);
             Controls.Add(DateTextBox1);
             Controls.Add(pesinButton);
             Controls.Add(krediButton);
@@ -117,5 +139,7 @@
         private Button krediButton;
         private Button pesinButton;
         private MaskedTextBox DateTextBox1;
+        private MaskedTextBox idmaskedTextBox1;
+        private Label label3;
     }
 }

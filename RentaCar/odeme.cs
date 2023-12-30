@@ -28,16 +28,17 @@ namespace RentaCar
 
         private void krediButton_Click(object sender, EventArgs e)
         {
-            
-           var carplayment = new CarPayment()
+
+            var carplayment = new CarPayment()
             {
+                id = Convert.ToInt32(idmaskedTextBox1.Text),
                miktar = Convert.ToInt32(label2.Text),
                Tarih = Convert.ToDateTime(DateTextBox1.Text),
                 Tc = tc
 
             };
             playment.SetPlayment(carplayment);
-            kredi kredi = new kredi();
+            kredi kredi = new kredi( Convert.ToInt32(idmaskedTextBox1.Text));
             kredi.Show();
         }
 
@@ -46,13 +47,14 @@ namespace RentaCar
 
             var carplayment = new CarPayment()
             {
+                id = Convert.ToInt32(idmaskedTextBox1.Text),
                 miktar = Convert.ToInt32(label2.Text),
                 Tarih = Convert.ToDateTime(DateTextBox1.Text),
                 Tc = tc,
 
             };
             playment.SetPlayment(carplayment);
-            pesin pesin = new pesin(Convert.ToInt32(label2.Text));
+            pesin pesin = new pesin(Convert.ToInt32(label2.Text), Convert.ToInt32(idmaskedTextBox1.Text));
             pesin.Show();
         }
     }

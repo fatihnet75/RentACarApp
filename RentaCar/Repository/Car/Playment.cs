@@ -14,7 +14,7 @@ namespace RentaCar.Repository.Car
 
         public void SetPlayment(CarPayment Playment)
         {
-            string query = "INSERT INTO [dbo].[ödeme] VALUES (@Tc, @miktar ,@Tarih)";
+            string query = "INSERT INTO [dbo].[ödeme] VALUES (@id, @Tc, @miktar , @Tarih )";
 
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -22,9 +22,11 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@id", Playment.id);
                     command.Parameters.AddWithValue("@Tc", Playment.Tc);
-                    command.Parameters.AddWithValue("@Tarih", Playment.Tarih);
                     command.Parameters.AddWithValue("@miktar", Playment.miktar);
+                    command.Parameters.AddWithValue("@Tarih", Playment.Tarih);
+                    
 
                     command.ExecuteNonQuery();
                 }
@@ -58,6 +60,24 @@ namespace RentaCar.Repository.Car
 
             // Okuma işlemi başarısız olduysa veya miktar bulunamadıysa -1 veya başka bir değer döndürebilirsiniz.
             return -1;
+        }
+
+        public int GetNextPlaymentId(CarPayment Playment)
+        {
+            string query = "SELECT ISNULL(MAX(İŞLEMNO), 0) + 1 FROM [dbo].[ödeme];";
+
+            using (SqlConnection connection = GetSqlConnection())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // ExecuteScalar ile tek bir değer (bir sonraki İşlem No) alınır
+                    int nextId = Convert.ToInt32(command.ExecuteScalar());
+
+                    return nextId;
+                }
+            }
         }
 
 

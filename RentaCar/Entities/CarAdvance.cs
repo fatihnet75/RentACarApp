@@ -8,6 +8,7 @@ namespace RentaCar.Entities
 {
     public class CarAdvance
     {
+        public int id {  get; set; }
         public int ToplamPara { get; set; }
         public DateTime Tarih { get; set; }
     }

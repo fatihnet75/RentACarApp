@@ -13,7 +13,7 @@ namespace RentaCar.Repository.Car
     {
         public void SetAdvance(CarAdvance Advance)
         {
-            string query = "INSERT INTO [dbo].[Peşin] VALUES (@toplampara, @Tarih )";
+            string query = "INSERT INTO [dbo].[Peşin] VALUES (@ino,@toplampara ,@tarih)";
 
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -21,8 +21,9 @@ namespace RentaCar.Repository.Car
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@kartid", Advance.ToplamPara);
-                    command.Parameters.AddWithValue("@cvv", Advance.Tarih);
+                    command.Parameters.AddWithValue("@ino", Advance.id);
+                    command.Parameters.AddWithValue("@toplampara", Advance.ToplamPara);
+                    command.Parameters.AddWithValue("@tarih", Advance.Tarih);
 
                     command.ExecuteNonQuery();
                 }

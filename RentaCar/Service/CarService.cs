@@ -25,12 +25,15 @@ namespace RentaCar.Service
             return cars;
         }
         
-        public List<CarsWithDetail> GetAllCarsWithDetail(string fuelType)
+        public List<CarsWithDetail> GetAllCarsWithDetail()
         {
-            var cars = _carRepository
-                .GetAllCarsWithFuel(fuelType);
+            var carsWithFuel1 = _carRepository.GetAllCarsWithFuel("Elektrik");
+            var carsWithFuel2 = _carRepository.GetAllCarsWithFuel("Benzin");
 
-            return cars;
+            // İki listeyi birleştir
+            var combinedCars = carsWithFuel1.Concat(carsWithFuel2).ToList();
+
+            return combinedCars;
         }
 
         public ModelAndBrandDto GetModelAndBrandByPlaka(string plaka)

@@ -24,7 +24,7 @@ namespace RentaCar.Repository.Car
                     command.Parameters.AddWithValue("@tc", Advance.tc);
                     command.Parameters.AddWithValue("@ad", Advance.Ad);
                     command.Parameters.AddWithValue("@Soyad", Advance.Soyad);
-                    command.Parameters.AddWithValue("@ehiyettipi", Advance.tip);
+                    command.Parameters.AddWithValue("@ehliyettipi", Advance.tip);
 
                     command.ExecuteNonQuery();
                 }

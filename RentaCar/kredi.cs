@@ -17,15 +17,18 @@ namespace RentaCar
     public partial class kredi : Form
     {
         private readonly Credit credit = new Credit();
-        public kredi()
+        private int no;
+        public kredi(int no)
         {
+            this.no = no;
             InitializeComponent();
+            
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
             var Carcredit = new CarCredit {
-
+                no = no,
                 KartName = Convert.ToString(adTextBox.Text),
                 KartId = Convert.ToInt64(kartIdTextBox.Text),
                 Cvv = Convert.ToInt32(CvvTextBox.Text),
