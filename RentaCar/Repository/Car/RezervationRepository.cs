@@ -11,7 +11,8 @@ namespace RentaCar.Repository.Car
         public void SetRezervasyon(CarRezervation rezervation)
         {
             string query = "INSERT INTO [dbo].[Rezervasyon] VALUES (@Tc, @Plaka, @FirstYil, @LastYil)";
-
+            //string query = "EXEC sp_AddReservation @Tc, @BaslangicTarihi, @BitisTarihi, @Plaka";
+            //SAKLI PROSEDUR
             using (SqlConnection connection = GetSqlConnection())
             {
                 connection.Open();

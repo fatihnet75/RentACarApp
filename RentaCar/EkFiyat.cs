@@ -45,6 +45,8 @@ namespace RentaCar
                     CarKaskono = Convert.ToInt64(kaskoTextBox.Text),
                 };
                 kasko.SetKasko(carkasko);
+                Girir basla = new Girir();
+                basla.Show();
             }
              if (soforKiralaButton.Checked)
             {
@@ -60,6 +62,8 @@ namespace RentaCar
                 Girir basla = new Girir();
                 basla.Show();
             }
+            Girir baslam = new Girir();
+            baslam.Show();
         }
     }
 }
