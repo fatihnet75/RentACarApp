@@ -1,13 +1,16 @@
 using RentaCar.Entities;
 using RentaCar.Service;
-using System.Runtime.CompilerServices;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace RentaCar
 {
     public partial class Arac_bilgileri : Form
     {
         private readonly CarService _carService;
-        public Arac_bilgileri(CarService carService) 
+
+        public Arac_bilgileri(CarService carService)
         {
             InitializeComponent();
             _carService = carService;
@@ -49,9 +52,22 @@ namespace RentaCar
         {
             long plaka = Convert.ToInt64(plakaText.Text);
 
-                Kiraci kiraci = new Kiraci(carService: _carService,plaka: plaka);
-                kiraci.Show();
-            
+            // Kiracý formunu açmadan önce fiyatlarý topla
+            var cars = _carService.GetAllCarsWithDetail();
+            var toplamFiyatListesi = new List<int>();
+
+            foreach (var car in cars)
+            {
+                toplamFiyatListesi.Add(car.Fiyat);
+            }
+
+            int toplambutce = toplamFiyatListesi.Sum();
+
+            // Toplam bütçeyi etiket kontrolüne yazdýr
+            toplambütce.Text = $"Toplam Bütçe: {toplambutce}";
+
+            Kiraci kiraci = new Kiraci(carService: _carService, plaka: plaka);
+            kiraci.Show();
         }
     }
 }

@@ -33,6 +33,7 @@ namespace RentaCar
             devamButton = new Button();
             dataGridView1 = new DataGridView();
             plakaText = new TextBox();
+            toplambütce = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -66,11 +67,20 @@ namespace RentaCar
             plakaText.TabIndex = 2;
             plakaText.Text = "Plaka Giriniz";
             // 
+            // toplambütce
+            // 
+            toplambütce.AutoSize = true;
+            toplambütce.Location = new Point(394, 317);
+            toplambütce.Name = "toplambütce";
+            toplambütce.Size = new Size(0, 20);
+            toplambütce.TabIndex = 3;
+            // 
             // Arac_bilgileri
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(649, 601);
+            Controls.Add(toplambütce);
             Controls.Add(plakaText);
             Controls.Add(dataGridView1);
             Controls.Add(devamButton);
@@ -87,5 +97,6 @@ namespace RentaCar
         private Button devamButton;
         private DataGridView dataGridView1;
         private TextBox plakaText;
+        private Label toplambütce;
     }
 }
