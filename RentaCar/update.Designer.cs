@@ -41,16 +41,18 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.GrayText;
             button1.Location = new Point(273, 333);
             button1.Name = "button1";
             button1.Size = new Size(203, 46);
             button1.TabIndex = 0;
             button1.Text = "Güncelle";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // plakaTextBox1
             // 
+            plakaTextBox1.BackColor = SystemColors.ControlLight;
             plakaTextBox1.Location = new Point(308, 38);
             plakaTextBox1.Name = "plakaTextBox1";
             plakaTextBox1.Size = new Size(125, 27);
@@ -67,6 +69,7 @@
             // 
             // yıilTextBox1
             // 
+            yıilTextBox1.BackColor = SystemColors.ControlLight;
             yıilTextBox1.Location = new Point(308, 211);
             yıilTextBox1.Mask = "00/00/0000";
             yıilTextBox1.Name = "yıilTextBox1";
@@ -76,6 +79,7 @@
             // 
             // fiyatTextBox2
             // 
+            fiyatTextBox2.BackColor = SystemColors.ControlLight;
             fiyatTextBox2.Location = new Point(308, 153);
             fiyatTextBox2.Name = "fiyatTextBox2";
             fiyatTextBox2.Size = new Size(125, 27);
@@ -83,6 +87,7 @@
             // 
             // renkTextBox3
             // 
+            renkTextBox3.BackColor = SystemColors.ControlLight;
             renkTextBox3.Location = new Point(308, 93);
             renkTextBox3.Name = "renkTextBox3";
             renkTextBox3.Size = new Size(125, 27);
@@ -119,6 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(label4);
             Controls.Add(label3);

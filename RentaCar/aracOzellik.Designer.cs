@@ -107,6 +107,7 @@
             // 
             // yilTextBox
             // 
+            yilTextBox.BackColor = SystemColors.ControlLight;
             yilTextBox.Location = new Point(163, 38);
             yilTextBox.Mask = "00/00/0000";
             yilTextBox.Name = "yilTextBox";
@@ -116,6 +117,7 @@
             // 
             // plakaTextBox
             // 
+            plakaTextBox.BackColor = SystemColors.ControlLight;
             plakaTextBox.Location = new Point(163, 113);
             plakaTextBox.Name = "plakaTextBox";
             plakaTextBox.Size = new Size(125, 27);
@@ -123,6 +125,7 @@
             // 
             // fiyatTextBox
             // 
+            fiyatTextBox.BackColor = SystemColors.ControlLight;
             fiyatTextBox.Location = new Point(163, 182);
             fiyatTextBox.Name = "fiyatTextBox";
             fiyatTextBox.Size = new Size(125, 27);
@@ -130,6 +133,7 @@
             // 
             // renkTextBox
             // 
+            renkTextBox.BackColor = SystemColors.ControlLight;
             renkTextBox.Location = new Point(163, 253);
             renkTextBox.Name = "renkTextBox";
             renkTextBox.Size = new Size(125, 27);
@@ -137,6 +141,7 @@
             // 
             // modelkTextBox
             // 
+            modelkTextBox.BackColor = SystemColors.ControlLight;
             modelkTextBox.Location = new Point(474, 109);
             modelkTextBox.Name = "modelkTextBox";
             modelkTextBox.Size = new Size(125, 27);
@@ -144,6 +149,7 @@
             // 
             // markaTextBox
             // 
+            markaTextBox.BackColor = SystemColors.ControlLight;
             markaTextBox.Location = new Point(474, 38);
             markaTextBox.Name = "markaTextBox";
             markaTextBox.Size = new Size(125, 27);
@@ -182,18 +188,20 @@
             // 
             // devamButton
             // 
+            devamButton.BackColor = SystemColors.GrayText;
             devamButton.Location = new Point(327, 360);
             devamButton.Name = "devamButton";
             devamButton.Size = new Size(94, 29);
             devamButton.TabIndex = 15;
-            devamButton.Text = "devam";
-            devamButton.UseVisualStyleBackColor = true;
+            devamButton.Text = "Devam";
+            devamButton.UseVisualStyleBackColor = false;
             devamButton.Click += devamButton_Click;
             // 
             // aracOzellik
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(devamButton);
             Controls.Add(elektrikRadioButton);
@@ -213,6 +221,7 @@
             Controls.Add(label1);
             Name = "aracOzellik";
             Text = "aracOzellik";
+            Load += aracOzellik_Load;
             ResumeLayout(false);
             PerformLayout();
         }

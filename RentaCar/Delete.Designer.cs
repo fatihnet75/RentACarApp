@@ -35,12 +35,13 @@
             // 
             // Silbutton1
             // 
+            Silbutton1.BackColor = SystemColors.GrayText;
             Silbutton1.Location = new Point(305, 290);
             Silbutton1.Name = "Silbutton1";
             Silbutton1.Size = new Size(247, 77);
             Silbutton1.TabIndex = 0;
             Silbutton1.Text = "Sil";
-            Silbutton1.UseVisualStyleBackColor = true;
+            Silbutton1.UseVisualStyleBackColor = false;
             Silbutton1.Click += Silbutton1_Click;
             // 
             // textbox
@@ -54,6 +55,7 @@
             // 
             // deletetextBox1
             // 
+            deletetextBox1.BackColor = SystemColors.ControlLight;
             deletetextBox1.Location = new Point(351, 78);
             deletetextBox1.Name = "deletetextBox1";
             deletetextBox1.Size = new Size(125, 27);
@@ -63,6 +65,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(deletetextBox1);
             Controls.Add(textbox);

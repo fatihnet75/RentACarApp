@@ -26,18 +26,18 @@ namespace RentaCar
 
         private void devamButton_Click(object sender, EventArgs e)
         {
-            var carElectiric=new CarElectiric()
-            { 
-             Plaka =Convert.ToInt64(plakaTextBox.Text),
-             marka=Convert.ToString(markaTextBox.Text),
-             model=Convert.ToString(modelkTextBox.Text),
+            var carElectiric = new CarElectiric()
+            {
+                Plaka = Convert.ToInt64(plakaTextBox.Text),
+                marka = Convert.ToString(markaTextBox.Text),
+                model = Convert.ToString(modelkTextBox.Text),
             };
             var AddCars = new AddCArs()
             {
                 Plaka = Convert.ToInt64(plakaTextBox.Text),
                 Renk = Convert.ToString(renkTextBox.Text),
                 Yil = Convert.ToDateTime(yilTextBox.Text),
-                Fiyat=Convert.ToInt32(fiyatTextBox.Text),
+                Fiyat = Convert.ToInt32(fiyatTextBox.Text),
 
             };
             var carGasoline = new CarGasoline()
@@ -50,7 +50,7 @@ namespace RentaCar
             newcar.SetCar(AddCars);
             if (benzinRadioButton.Checked)
             {
-               gasoline.SetGasoline(carGasoline);
+                gasoline.SetGasoline(carGasoline);
             }
             else if (elektrikRadioButton.Checked)
             {
@@ -58,6 +58,11 @@ namespace RentaCar
             }
             aracSahibi aracSahibi = new aracSahibi(Convert.ToInt64(plakaTextBox.Text));
             aracSahibi.Show();
+        }
+
+        private void aracOzellik_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

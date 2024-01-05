@@ -39,17 +39,20 @@ namespace RentaCar
             // 
             // devamButton
             // 
+            devamButton.BackColor = SystemColors.GrayText;
+            devamButton.ForeColor = SystemColors.ActiveCaptionText;
             devamButton.Location = new Point(146, 367);
             devamButton.Margin = new Padding(3, 4, 3, 4);
             devamButton.Name = "devamButton";
             devamButton.Size = new Size(93, 52);
             devamButton.TabIndex = 0;
             devamButton.Text = "DEVAM";
-            devamButton.UseVisualStyleBackColor = true;
+            devamButton.UseVisualStyleBackColor = false;
             devamButton.Click += devamButton_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Info;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(0, 12);
             dataGridView1.Name = "dataGridView1";
@@ -59,6 +62,7 @@ namespace RentaCar
             // 
             // plakaText
             // 
+            plakaText.BackColor = SystemColors.ControlLight;
             plakaText.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
             plakaText.Location = new Point(122, 305);
             plakaText.Multiline = true;
@@ -79,6 +83,7 @@ namespace RentaCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(649, 601);
             Controls.Add(toplambütce);
             Controls.Add(plakaText);

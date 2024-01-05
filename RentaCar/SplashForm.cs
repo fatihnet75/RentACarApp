@@ -1,51 +1,30 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿// SplashForm.cs
+using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace RentaCar
 {
     public partial class SplashForm : Form
     {
-        private int remainingSeconds = 3; // Geri sayım için kalan süre
-
         public SplashForm()
         {
             InitializeComponent();
         }
 
-        private async void SplashForm_Load(object sender, EventArgs e)
+        private void SplashForm_Load(object sender, EventArgs e)
         {
-            await PerformLoadingAsync();
-
-            Girir girirForm = new Girir();
-            girirForm.Show();
-
-            // 3 saniyelik geri sayımı başlat
-            await StartCountdown();
+            // You can set any additional properties for the splash screen here
+            
         }
 
-        private async Task PerformLoadingAsync()
+        public void ShowMainForm()
         {
-            // Simüle edilmiş bir yükleme süresi
-            await Task.Delay(300); // 0.3 saniye
-        }
+            // Simulate some loading time
+            Thread.Sleep(3000);
 
-        private async Task StartCountdown()
-        {
-            while (remainingSeconds > 0)
-            {
-                label1.Text = $"Kalan Süre: {remainingSeconds} saniye";
-                await Task.Delay(1000); // 1 saniye beklet
-                remainingSeconds--;
-            }
-
-            // Geri sayım tamamlandıktan sonra SplashForm'u kapat
-            Close();
-        }
-
-        private void SplashForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // Eğer bu olay tetiklenirse, diğer formu açabilir veya başka işlemler yapabilirsiniz.
+            // Close the splash screen and show the main form
+            this.Close();
         }
     }
 }

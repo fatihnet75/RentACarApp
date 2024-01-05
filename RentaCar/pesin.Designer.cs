@@ -37,6 +37,7 @@
             // 
             // tarihTextBox
             // 
+            tarihTextBox.BackColor = SystemColors.ControlLight;
             tarihTextBox.Location = new Point(199, 46);
             tarihTextBox.Mask = "00/00/0000";
             tarihTextBox.Name = "tarihTextBox";
@@ -72,18 +73,20 @@
             // 
             // Savebutton1
             // 
+            Savebutton1.BackColor = SystemColors.GrayText;
             Savebutton1.Location = new Point(274, 243);
             Savebutton1.Name = "Savebutton1";
             Savebutton1.Size = new Size(153, 51);
             Savebutton1.TabIndex = 7;
             Savebutton1.Text = "Kaydet";
-            Savebutton1.UseVisualStyleBackColor = true;
+            Savebutton1.UseVisualStyleBackColor = false;
             Savebutton1.Click += Savebutton1_Click;
             // 
             // pesin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(Savebutton1);
             Controls.Add(toplamlabel2);

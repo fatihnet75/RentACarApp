@@ -67,26 +67,29 @@
             // 
             // krediButton
             // 
+            krediButton.BackColor = SystemColors.GrayText;
             krediButton.Location = new Point(166, 236);
             krediButton.Name = "krediButton";
             krediButton.Size = new Size(94, 29);
             krediButton.TabIndex = 4;
             krediButton.Text = "Kredi";
-            krediButton.UseVisualStyleBackColor = true;
+            krediButton.UseVisualStyleBackColor = false;
             krediButton.Click += krediButton_Click;
             // 
             // pesinButton
             // 
+            pesinButton.BackColor = SystemColors.GrayText;
             pesinButton.Location = new Point(413, 236);
             pesinButton.Name = "pesinButton";
             pesinButton.Size = new Size(94, 29);
             pesinButton.TabIndex = 5;
             pesinButton.Text = "pesin";
-            pesinButton.UseVisualStyleBackColor = true;
+            pesinButton.UseVisualStyleBackColor = false;
             pesinButton.Click += pesinButton_Click;
             // 
             // DateTextBox1
             // 
+            DateTextBox1.BackColor = SystemColors.ControlLight;
             DateTextBox1.Location = new Point(146, 99);
             DateTextBox1.Mask = "00/00/0000";
             DateTextBox1.Name = "DateTextBox1";
@@ -96,6 +99,7 @@
             // 
             // idmaskedTextBox1
             // 
+            idmaskedTextBox1.BackColor = SystemColors.ControlLight;
             idmaskedTextBox1.Location = new Point(146, 162);
             idmaskedTextBox1.Mask = "0000";
             idmaskedTextBox1.Name = "idmaskedTextBox1";
@@ -116,6 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(label3);
             Controls.Add(idmaskedTextBox1);

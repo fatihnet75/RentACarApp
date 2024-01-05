@@ -73,6 +73,7 @@
             // 
             // meslekTextBox
             // 
+            meslekTextBox.BackColor = SystemColors.ControlLight;
             meslekTextBox.Location = new Point(168, 193);
             meslekTextBox.Name = "meslekTextBox";
             meslekTextBox.Size = new Size(125, 27);
@@ -80,6 +81,7 @@
             // 
             // adSoyadTextBox
             // 
+            adSoyadTextBox.BackColor = SystemColors.ControlLight;
             adSoyadTextBox.Location = new Point(168, 64);
             adSoyadTextBox.Name = "adSoyadTextBox";
             adSoyadTextBox.Size = new Size(125, 27);
@@ -87,6 +89,7 @@
             // 
             // tcTextBox
             // 
+            tcTextBox.BackColor = SystemColors.ControlLight;
             tcTextBox.Location = new Point(168, 132);
             tcTextBox.Mask = "00000000000";
             tcTextBox.Name = "tcTextBox";
@@ -105,6 +108,7 @@
             // 
             // telPozisyonTextBox
             // 
+            telPozisyonTextBox.BackColor = SystemColors.ControlLight;
             telPozisyonTextBox.Location = new Point(325, 274);
             telPozisyonTextBox.Name = "telPozisyonTextBox";
             telPozisyonTextBox.Size = new Size(125, 27);
@@ -112,12 +116,13 @@
             // 
             // devamButton
             // 
+            devamButton.BackColor = SystemColors.GrayText;
             devamButton.Location = new Point(356, 354);
             devamButton.Name = "devamButton";
             devamButton.Size = new Size(94, 29);
             devamButton.TabIndex = 15;
             devamButton.Text = "DEVAM";
-            devamButton.UseVisualStyleBackColor = true;
+            devamButton.UseVisualStyleBackColor = false;
             devamButton.Click += devamButton_Click;
             // 
             // KendiArabam
@@ -146,6 +151,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(SirketArabası);
             Controls.Add(KendiArabam);

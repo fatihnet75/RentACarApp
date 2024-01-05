@@ -127,6 +127,7 @@
             // 
             // ekFiyatKasko
             // 
+            ekFiyatKasko.BackColor = SystemColors.ControlLight;
             ekFiyatKasko.Location = new Point(134, 202);
             ekFiyatKasko.Name = "ekFiyatKasko";
             ekFiyatKasko.Size = new Size(125, 27);
@@ -134,6 +135,7 @@
             // 
             // sonGecerlilikTarihTextBox
             // 
+            sonGecerlilikTarihTextBox.BackColor = SystemColors.ControlLight;
             sonGecerlilikTarihTextBox.Location = new Point(134, 126);
             sonGecerlilikTarihTextBox.Mask = "00/00/0000";
             sonGecerlilikTarihTextBox.Name = "sonGecerlilikTarihTextBox";
@@ -152,6 +154,7 @@
             // 
             // kaskoTextBox
             // 
+            kaskoTextBox.BackColor = SystemColors.ControlLight;
             kaskoTextBox.Location = new Point(134, 56);
             kaskoTextBox.Mask = "000000000";
             kaskoTextBox.Name = "kaskoTextBox";
@@ -184,16 +187,18 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.GrayText;
             button1.Location = new Point(72, 305);
             button1.Name = "button1";
             button1.Size = new Size(157, 47);
             button1.TabIndex = 25;
             button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // sonGecerlilikTarihsigortaTextBox1
             // 
+            sonGecerlilikTarihsigortaTextBox1.BackColor = SystemColors.ControlLight;
             sonGecerlilikTarihsigortaTextBox1.Location = new Point(146, 129);
             sonGecerlilikTarihsigortaTextBox1.Mask = "00/00/0000";
             sonGecerlilikTarihsigortaTextBox1.Name = "sonGecerlilikTarihsigortaTextBox1";
@@ -221,6 +226,7 @@
             // 
             // sigortaTextBox
             // 
+            sigortaTextBox.BackColor = SystemColors.ControlLight;
             sigortaTextBox.Location = new Point(136, 53);
             sigortaTextBox.Mask = "000000000";
             sigortaTextBox.Name = "sigortaTextBox";
@@ -250,6 +256,7 @@
             // 
             // ekFiyatSofor
             // 
+            ekFiyatSofor.BackColor = SystemColors.ControlLight;
             ekFiyatSofor.Location = new Point(128, 287);
             ekFiyatSofor.Name = "ekFiyatSofor";
             ekFiyatSofor.Size = new Size(125, 27);
@@ -277,6 +284,7 @@
             // 
             // ehliyetTipiTextBox
             // 
+            ehliyetTipiTextBox.BackColor = SystemColors.ControlLight;
             ehliyetTipiTextBox.Location = new Point(128, 221);
             ehliyetTipiTextBox.Name = "ehliyetTipiTextBox";
             ehliyetTipiTextBox.Size = new Size(125, 27);
@@ -284,6 +292,7 @@
             // 
             // soyadTextBox
             // 
+            soyadTextBox.BackColor = SystemColors.ControlLight;
             soyadTextBox.Location = new Point(128, 98);
             soyadTextBox.Name = "soyadTextBox";
             soyadTextBox.Size = new Size(125, 27);
@@ -291,6 +300,7 @@
             // 
             // adTextBox
             // 
+            adTextBox.BackColor = SystemColors.ControlLight;
             adTextBox.Location = new Point(128, 42);
             adTextBox.Name = "adTextBox";
             adTextBox.Size = new Size(125, 27);
@@ -298,6 +308,7 @@
             // 
             // tcTextBox
             // 
+            tcTextBox.BackColor = SystemColors.ControlLight;
             tcTextBox.Location = new Point(128, 153);
             tcTextBox.Mask = "00000000000";
             tcTextBox.Name = "tcTextBox";
@@ -318,6 +329,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(940, 450);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);

@@ -65,6 +65,7 @@
             // 
             // baslangicTextBox
             // 
+            baslangicTextBox.BackColor = SystemColors.ControlLight;
             baslangicTextBox.Location = new Point(192, 47);
             baslangicTextBox.Mask = "00/00/0000";
             baslangicTextBox.Name = "baslangicTextBox";
@@ -74,6 +75,7 @@
             // 
             // bitisTextBox
             // 
+            bitisTextBox.BackColor = SystemColors.ControlLight;
             bitisTextBox.Location = new Point(480, 47);
             bitisTextBox.Mask = "00/00/0000";
             bitisTextBox.Name = "bitisTextBox";
@@ -83,6 +85,7 @@
             // 
             // tcTextBox
             // 
+            tcTextBox.BackColor = SystemColors.ControlLight;
             tcTextBox.Location = new Point(192, 114);
             tcTextBox.Mask = "00000000000";
             tcTextBox.Name = "tcTextBox";
@@ -110,6 +113,7 @@
             // 
             // telTextBox
             // 
+            telTextBox.BackColor = SystemColors.ControlLight;
             telTextBox.Location = new Point(480, 117);
             telTextBox.Mask = "00000000000";
             telTextBox.Name = "telTextBox";
@@ -127,6 +131,7 @@
             // 
             // adTextBox
             // 
+            adTextBox.BackColor = SystemColors.ControlLight;
             adTextBox.Location = new Point(192, 188);
             adTextBox.Name = "adTextBox";
             adTextBox.Size = new Size(125, 27);
@@ -134,6 +139,7 @@
             // 
             // soyadTextBox
             // 
+            soyadTextBox.BackColor = SystemColors.ControlLight;
             soyadTextBox.Location = new Point(192, 248);
             soyadTextBox.Name = "soyadTextBox";
             soyadTextBox.Size = new Size(125, 27);
@@ -150,6 +156,7 @@
             // 
             // ePostaTextBox
             // 
+            ePostaTextBox.BackColor = SystemColors.ControlLight;
             ePostaTextBox.Location = new Point(480, 181);
             ePostaTextBox.Name = "ePostaTextBox";
             ePostaTextBox.Size = new Size(125, 27);
@@ -166,18 +173,20 @@
             // 
             // DEVAM
             // 
+            DEVAM.BackColor = SystemColors.GrayText;
             DEVAM.Location = new Point(332, 361);
             DEVAM.Name = "DEVAM";
             DEVAM.Size = new Size(147, 49);
             DEVAM.TabIndex = 15;
-            DEVAM.Text = "devamButton";
-            DEVAM.UseVisualStyleBackColor = true;
+            DEVAM.Text = "DEVAM";
+            DEVAM.UseVisualStyleBackColor = false;
             DEVAM.Click += DEVAM_Click;
             // 
             // Kiraci
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(DEVAM);
             Controls.Add(ePostaTextBox);

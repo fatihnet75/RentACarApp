@@ -39,6 +39,7 @@
             // 
             // adTextBox
             // 
+            adTextBox.BackColor = SystemColors.ControlLight;
             adTextBox.Location = new Point(213, 49);
             adTextBox.Name = "adTextBox";
             adTextBox.Size = new Size(125, 27);
@@ -55,6 +56,7 @@
             // 
             // kartIdTextBox
             // 
+            kartIdTextBox.BackColor = SystemColors.ControlLight;
             kartIdTextBox.Location = new Point(213, 108);
             kartIdTextBox.Mask = "0000000000000000";
             kartIdTextBox.Name = "kartIdTextBox";
@@ -72,6 +74,7 @@
             // 
             // CvvTextBox
             // 
+            CvvTextBox.BackColor = SystemColors.ControlLight;
             CvvTextBox.Location = new Point(213, 184);
             CvvTextBox.Mask = "000";
             CvvTextBox.Name = "CvvTextBox";
@@ -90,18 +93,20 @@
             // 
             // Savebutton
             // 
+            Savebutton.BackColor = SystemColors.GrayText;
             Savebutton.Location = new Point(233, 270);
             Savebutton.Name = "Savebutton";
             Savebutton.Size = new Size(188, 58);
             Savebutton.TabIndex = 17;
             Savebutton.Text = "kaydet";
-            Savebutton.UseVisualStyleBackColor = true;
+            Savebutton.UseVisualStyleBackColor = false;
             Savebutton.Click += Savebutton_Click;
             // 
             // kredi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(Savebutton);
             Controls.Add(CvvTextBox);

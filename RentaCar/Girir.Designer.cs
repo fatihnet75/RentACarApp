@@ -36,48 +36,57 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.GrayText;
+            button1.Cursor = Cursors.AppStarting;
             button1.Location = new Point(97, 51);
             button1.Name = "button1";
             button1.Size = new Size(232, 71);
             button1.TabIndex = 0;
-            button1.Text = "Araç ekle";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "ARAÇ EKLE";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.GrayText;
+            button2.Cursor = Cursors.AppStarting;
             button2.Location = new Point(97, 174);
             button2.Name = "button2";
             button2.Size = new Size(232, 70);
             button2.TabIndex = 1;
-            button2.Text = "araç sil";
-            button2.UseVisualStyleBackColor = true;
+            button2.Text = "ARAÇ SİL";
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.GrayText;
+            button3.Cursor = Cursors.AppStarting;
             button3.Location = new Point(97, 286);
             button3.Name = "button3";
             button3.Size = new Size(232, 71);
             button3.TabIndex = 2;
-            button3.Text = "araç güncelle";
-            button3.UseVisualStyleBackColor = true;
+            button3.Text = "ARAÇ GÜNCELLE";
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.GrayText;
+            button4.Cursor = Cursors.AppStarting;
             button4.Location = new Point(397, 54);
             button4.Name = "button4";
             button4.Size = new Size(367, 315);
             button4.TabIndex = 3;
-            button4.Text = "araç kirala";
-            button4.UseVisualStyleBackColor = true;
+            button4.Text = "ARAÇ KİRALA";
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // Girir
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(button3);
